@@ -62,7 +62,7 @@ def get_modified(tag):
 
 def merge(tag):
     """Git merge the target tag into the current head."""
-    call(['git', 'merge', '--no-ff', tag], die_on_error=False)
+    call(['git', 'merge', '--no-ff', '--no-commit', tag], die_on_error=False)
 
 
 def get_conflicted():
